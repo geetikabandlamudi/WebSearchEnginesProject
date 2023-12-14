@@ -33,7 +33,7 @@ for j in range(1,643,4):
 
 
 
-    with open('corpus_embeddings'+str(k), 'wb') as file:
+    with open('./embeddings/corpus_embeddings'+str(k), 'wb') as file:
         pickle.dump(corpus_embeddings, file)
 
     del corpus_embeddings
