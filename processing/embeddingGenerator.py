@@ -4,13 +4,13 @@ import sys
 import pickle
 
 embedder = SentenceTransformer('all-MiniLM-L6-v2')
-k=33
+k=1
 
 
-for j in range(129,229,4):
+for j in range(1,643,4):
     corpus = []
     for i in range(j,j+4):
-        with open('E:\\NYU\\Web Search Engines\\Project\\bert_docs\\intermediate_postings'+str(i)+'.txt', 'r', encoding='utf-8') as file:
+        with open('./bert_docs/intermediate_postings'+str(i)+'.txt', 'r', encoding='utf-8') as file:
             content = file.read()
 
         sections = content.split('\n\n\n')
