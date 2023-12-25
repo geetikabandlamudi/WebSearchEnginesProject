@@ -2,6 +2,7 @@
 def get_embedding(inp_question):
     return sentence_transformer_model.encode(inp_question, convert_to_tensor=True)
 
+
 def diversity_at_k(top_k_documents):
     num_documents = len(top_k_documents)
     diversity_scores = []
@@ -27,11 +28,15 @@ def query_passage_similarity(query, pid):
 
 diversity_sum = 0
 diversity_data = []
+diversityScoreFile = open('diversity_scores.txt', 'w')
 for index, query in queries.iterrows():
     search_result = semantic_search(query['query'])
     diversity_score = diversity_at_k(search_result)
     query_similarity = query_passage_similarity(query['query'], search_result[0])
     diversity_data.append({"qid": query['qid'], "query": query['query'],
                             "diversity_score": diversity_score, "query_similarity": query_similarity})
+
+    diversityScoreFile.write('\t'.join(map(str, [query['qid'], query['query'], diversity_score, query_similarity])) + '\n')
     diversity_sum+=diversity_score
     print(query, diversity_score, query_similarity)
+diversityScoreFile.close()
