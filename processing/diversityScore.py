@@ -1,3 +1,7 @@
+# Function to convert a query into an embedding
+def get_embedding(inp_question):
+    return sentence_transformer_model.encode(inp_question, convert_to_tensor=True)
+
 def diversity_at_k(top_k_documents):
     num_documents = len(top_k_documents)
     diversity_scores = []
