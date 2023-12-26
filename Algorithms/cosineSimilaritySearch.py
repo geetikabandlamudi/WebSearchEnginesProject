@@ -13,7 +13,7 @@ class CosineSimilaritySearch():
     docContentManager = DocContentManager()
     
     def load_corpus_embeddings(self):
-        with open('./embeddings/corpus_embeddings_1', 'rb') as f:
+        with open('../EmbeddingGeneration/embeddings/combined_corpus_embeddings', 'rb') as f:
             self.corpus_embeddings = pickle.load(f)
         
     def search(self, query, top_k=100):
