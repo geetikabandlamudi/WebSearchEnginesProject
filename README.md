@@ -12,7 +12,8 @@ The repository structure is as follows:
 
     - EmbeddingGeneration
         - data
-            Contains the collection dataset. This is obtained from https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020#:~:text=Collection-,collection.tar.gz,-2.9%20GB 
+            Contains the collection dataset. This is obtained from 
+            https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020#:~:text=Collection-,collection.tar.gz,-2.9%20GB 
 
         - embeddings
             Empty initially. Will be filled up by generateEmbeddings and embeddingConcatenator. 
@@ -45,8 +46,10 @@ The repository structure is as follows:
             Hosts the code that exposes the bm25 functionality as an executable. 
         
         - cosineSimilaritySearch.py
-            Algorithm for traditional cosine similarity search using all-MiniLM-L6-v2 transformed passage embeddings
-            Provide the query in the main function and run the file using python3 cosineSimilaritySearch.py
+            Algorithm for traditional cosine similarity search using all-MiniLM-L6-v2 
+            transformed passage embeddings
+            Provide the query in the main function and run the file using 
+            python3 cosineSimilaritySearch.py
 
         - bm25+algo.ipynb
             Algorithm that uses BM25 followed by Semantic Search Algorithm
@@ -58,16 +61,18 @@ The repository structure is as follows:
             Performs Semantic Search and Nearest Neighbour search over expanded query
         
         - bm25+hnsw.ipynb
-            Ladder algorithm that uses BM25 to find the most relevant documents followed by HNSW algorithm 
-            to refine the results
+            Ladder algorithm that uses BM25 to find the most relevant documents 
+            followed by HNSW algorithm to refine the results
 
         - hnswConstruction.ipynb
-            Contains the logic to generate the HNSW index file for all the embeddings generated previously
-            make sure to perform Embedding Generation before this step
+            Contains the logic to generate the HNSW index file for all the embeddings 
+            generated previously. 
+            Make sure to perform Embedding Generation before this step
 
         - hnsw+bm25+reverse-ladder.ipynb
-            Inverse Ladder method that uses HNSW to get the documents first for a query and performs a keyword search on 
-            the returned documents to formulate a new query. This is passed to BM25 to get the most relevant documents
+            Inverse Ladder method that uses HNSW to get the documents first for a 
+            query and performs a keyword search on the returned documents to formulate 
+            a new query. This is passed to BM25 to get the most relevant documents
         
         - hnsw.ipynb
             Houses the code to test just the hnsw results for a given query
@@ -77,7 +82,9 @@ The repository structure is as follows:
             For a given pid, it returns the passage content
         
         - diversityScore.py
-            Hosts the importable functions to calculate the diversity between passages returned by the various algorithms and the similarity score between a passage and the query.
+            Hosts the importable functions to calculate the diversity between 
+            passages returned by the various algorithms and the similarity score 
+            between a passage and the query.
         
 
 
