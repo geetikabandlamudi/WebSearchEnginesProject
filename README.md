@@ -13,7 +13,7 @@ The repository structure is as follows:
     - EmbeddingGeneration
         - data
             Contains the collection dataset. This is obtained from 
-            https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020#:~:text=Collection-,collection.tar.gz,-2.9%20GB 
+            https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020 
 
         - embeddings
             Empty initially. Will be filled up by generateEmbeddings and embeddingConcatenator. 
