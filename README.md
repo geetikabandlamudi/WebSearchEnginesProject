@@ -29,12 +29,16 @@ The repository structure is as follows:
             Dependencies: already taken care of by previous notebook
 
             This file combines the corpus_embeddings files from previoud file into a single file.
+            If you want to skip these embedding generation phase, download the embeddings from our drive repo:
+            combined_corpus_embeddings: https://drive.google.com/file/d/1wD-RjVjj7PeiENHKEeLtKMJWBI7_YtDe/view?usp=sharing
+            corpus: https://drive.google.com/file/d/1ux72i05nou1BmKi2LfPebXshfm3bxIIS/view?usp=sharing
 
 
     - Algorithms
         
         Dependencies: 
-            1. Make sure to unzip binIndices.zip in the same directory
+            1. Make sure to unzip binIndices.zip in the same directory. 
+                Download this from https://drive.google.com/file/d/1swYu8i8ohV_zGEIMZ1sdMMZd_ukZSiAy/view?usp=sharing 
             2. pip install nltk and related dependencies.
             3. pip install hnswlib
             4. Run g++ bm25.cpp -o bm25 -std=c++14 and generate the bm25 executable
@@ -67,7 +71,9 @@ The repository structure is as follows:
         - hnswConstruction.ipynb
             Contains the logic to generate the HNSW index file for all the embeddings 
             generated previously. 
-            Make sure to perform Embedding Generation before this step
+            Make sure to perform Embedding Generation before this step.
+            If you want to skip this step, use this link to download the hnsw index bin file:
+            https://drive.google.com/file/d/1zqZfbKm-tqDH7zdoHIuXX8oQiJfbFd4E/view?usp=sharing
 
         - hnsw+bm25+reverse-ladder.ipynb
             Inverse Ladder method that uses HNSW to get the documents first for a 
